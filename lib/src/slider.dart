@@ -515,7 +515,7 @@ class _CardSliderState extends State<CardSlider>
                         _dragAlignmentCenter +
                         (animationPhase3 ? _bottomOffset : 0)),
          child:   Opacity(
-              opacity: i==0?1:i==1?0.5:0.1,
+         opacity: (1 / (i + 1)).clamp(0, 1),
 
               child:   Container(
               decoration: BoxDecoration(
